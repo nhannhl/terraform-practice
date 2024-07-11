@@ -6,7 +6,9 @@
 
 ## Step2: Tạo file main.tf để config template
 ## Step3: init - plan - apply - destroy
-```terraform init
+```
+terraform init
 terraform plan
 terraform apply
-terraform destroy```
+terraform destroy
+```
