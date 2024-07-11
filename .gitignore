@@ -1,0 +1,5 @@
+/keypair
+.terraform/
+.terraform.*
+*.tfstate
+*.tfstate.*
