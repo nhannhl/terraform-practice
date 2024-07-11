@@ -10,7 +10,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "ap-southeast-1"
+  region = var.region
   shared_config_files = [ "C:/Users/ADMIN/.aws/config" ]
   shared_credentials_files = [ "C:/Users/ADMIN/.aws/credentials" ]
   profile = "default"
@@ -64,8 +64,8 @@ resource "aws_security_group" "sg-web-httpd" {
 
 # Resource EC2 Instance
 resource "aws_instance" "web-httpd" {
-  ami = "ami-01dca6b685b1c23b7"
-  instance_type = "t3.micro"
+  ami = var.ami_ids[var.region]
+  instance_type = var.instance_type
   key_name = aws_key_pair.deployed-key.key_name
   user_data = file("../data/user_data.sh")
   security_groups = [ aws_security_group.sg-web-httpd.name ]
