@@ -13,9 +13,9 @@ variable "key_name" {
   description = "value of the key name"
 }
 
-variable "security_group_id" {
+variable "security_group_name" {
   type = string
-  description = "value of the security group id"
+  description = "value of the security group"
 }
 
 variable "user_data_path" {

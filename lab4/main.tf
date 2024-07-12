@@ -22,6 +22,6 @@ module "compute" {
   ami = var.ami_ids[var.region]
   instance_type = var.instance_type
   key_name = module.key_pair.key_pair_name
-  security_group_id = module.secutiry_group.security_group_id
+  security_group_name = module.secutiry_group.security_group_name
   user_data_path = var.user_data_path
 }
